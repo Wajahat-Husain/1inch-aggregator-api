@@ -39,9 +39,9 @@ The backend handles all interactions with the 1inch v6 API to fetch the best tra
 - GET /tokenPrice : Fetches current token prices.
 - GET /approve/spender: Fetch spender address for token approvals, In our case it will be swap contract on   specified chain.
 - GET /approve/allowance: Fetch token allowance.
-- GET /approve/transaction: Fetch approval transaction created data
-- GET /call/swap: Fetch swap transaction created data
-- Get /tokens: Fetch all the token that are avaliable on that chain to swap
+- GET /approve/transaction: Fetch approval transaction created data.
+- GET /call/swap: Fetch swap transaction created data.
+- Get /tokens: Fetch all the token that are avaliable on that chain to swap.
 
 ## Tech Stack
 - Node.js
