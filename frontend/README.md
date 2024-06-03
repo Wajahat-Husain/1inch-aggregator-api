@@ -31,6 +31,8 @@ The frontend of this application allows users to seamlessly swap tokens on the P
    Create a .env file in the root directory and add your backend base url:
     ```
    VITE_API_BASE_URL = 
+   VITE_FEE_WALLET_ADDRESS = 
+   VITE_FEE_PERCENTAGE = 
    ```
 
 4. Start the development server:
