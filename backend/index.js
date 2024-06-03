@@ -118,8 +118,8 @@ app.get("/approve/transaction", async (req, res) => {
 // Route to perform a swap transaction
 app.get("/call/swap", async (req, res) => {
   try {
-    const { chainId, src, dst, amount, from, slippage } = req.query;
-    console.log({ chainId, src, dst, amount, from, slippage })
+    const { chainId, src, dst, amount, from, slippage, referrer, fee } = req.query;
+    console.log({ chainId, src, dst, amount, from, slippage, referrer, fee })
     const url = `https://api.1inch.dev/swap/v6.0/${chainId}/swap`;
     const config = {
       headers: { Authorization: `Bearer ${process.env.AUTH_TOKEN}` },
@@ -129,6 +129,8 @@ app.get("/call/swap", async (req, res) => {
         amount,
         from,
         slippage,
+        referrer,
+        fee,
         disableEstimate: false,
         allowPartialFill: false,
       },

@@ -152,6 +152,8 @@ const Swap = () => {
             amount,
             from: userInfo?.account,
             slippage,
+            referrer: import.meta.env.VITE_FEE_WALLET_ADDRESS,
+            fee: Number(import.meta.env.VITE_FEE_PERCENTAGE),
           },
         }
       );
